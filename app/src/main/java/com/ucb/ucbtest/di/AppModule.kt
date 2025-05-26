@@ -29,6 +29,9 @@ import com.ucb.framework.datastore.LoginDataSource
 import com.ucb.framework.push.FirebaseNotificationDataSource
 import com.ucb.usecases.GetEmailKey
 import com.ucb.usecases.ObtainToken
+import com.ucb.data.PlanRepository
+import com.ucb.data.plan.IPlanFlexRemoteDataSource
+import com.ucb.framework.plan.PlanFlexRemoteDataSource
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -131,4 +134,21 @@ object AppModule {
     fun provideIPushDataSource(): IPushDataSource {
         return FirebaseNotificationDataSource()
     }
+
+    @Provides
+    @Singleton
+    fun providePlanRepository(
+        remoteDataSource: IPlanFlexRemoteDataSource
+    ): PlanRepository = PlanRepository(remoteDataSource)
+
+    @Provides
+    @Singleton
+    fun providePlanRemoteDataSource(
+        @ApplicationContext context: Context
+    ): IPlanFlexRemoteDataSource = PlanFlexRemoteDataSource(context)
+
 }
+
+
+
+

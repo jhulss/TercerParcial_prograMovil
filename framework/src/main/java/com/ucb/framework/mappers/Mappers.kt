@@ -1,33 +1,17 @@
 package com.ucb.framework.mappers
 
-import com.ucb.domain.Gitalias
-import com.ucb.domain.Movie
-import com.ucb.framework.dto.AvatarResponseDto
-import com.ucb.framework.dto.MovieDto
-import com.ucb.framework.persistence.GitAccount
+import com.ucb.domain.Feature
+import com.ucb.domain.Plan
+import com.ucb.framework.dto.FeatureDto
+import com.ucb.framework.dto.PlanFlexDto
 
-fun AvatarResponseDto.toModel(): Gitalias {
-    return Gitalias(
-        login = login,
-        avatarUrl = url
-    )
-}
-
-fun Gitalias.toEntity(): GitAccount {
-    return GitAccount(login)
-}
-
-fun GitAccount.toModel(): Gitalias {
-    return Gitalias(
-        alias,
-        ""
-    )
-}
-
-fun MovieDto.toModel(): Movie {
-    return Movie(
-        title = title,
-        overview = overview,
-        posterPath = posterPath
-    )
-}
+fun PlanFlexDto.toDomain(): Plan = Plan(
+    name        = nombre,
+    priceBefore = precioAnterior,
+    priceNow    = precioAhora,
+    bandwidth   = anchoBanda,
+    features    = features.map { it.toDomain() }
+)
+fun FeatureDto.toDomain(): Feature = Feature(
+    description = descripcion
+)

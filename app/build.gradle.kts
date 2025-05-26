@@ -73,6 +73,8 @@ dependencies {
 
     implementation(libs.firebase.messaging)
 
+    implementation(libs.gson)
+
     implementation(project(":usecases"))
     implementation(project(":domain"))
     implementation(project(":data"))
