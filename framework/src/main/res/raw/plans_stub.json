@@ -1,0 +1,73 @@
+{
+  "plans": [
+    {
+      "name": "Plan FLEX 5",
+      "priceBefore": "$270",
+      "priceNow": "$199",
+      "bandwidth": "5GB",
+      "features": [
+        {
+          "description": "Llamadas y SMS ilimitados"
+        },
+        {
+          "description": "Hotspot. Comparte tus datos"
+        },
+        {
+          "description": "Redes Sociales ilimitadas incluidas"
+        },
+        {
+          "description": "Arma tu plan con más apps ilimitadas"
+        },
+        {
+          "description": "CO2 Negativo"
+        }
+      ]
+    },
+    {
+      "name": "Plan FLEX 8",
+      "priceBefore": "$370",
+      "priceNow": "$299",
+      "bandwidth": "8GB",
+      "features": [
+        {
+          "description": "Llamadas y SMS ilimitados"
+        },
+        {
+          "description": "Hotspot. Comparte tus datos"
+        },
+        {
+          "description": "Redes Sociales ilimitadas incluidas"
+        },
+        {
+          "description": "Arma tu plan con más apps ilimitadas"
+        },
+        {
+          "description": "CO2 Negativo"
+        }
+      ]
+    },
+    {
+      "name": "Plan FLEX 10",
+      "priceBefore": "$470",
+      "priceNow": "$399",
+      "bandwidth": "10GB",
+      "features": [
+        {
+          "description": "Llamadas y SMS ilimitados"
+        },
+        {
+          "description": "Hotspot. Comparte tus datos"
+        },
+        {
+          "description": "Redes Sociales ilimitadas incluidas"
+        },
+        {
+          "description": "Arma tu plan con más apps ilimitadas"
+        },
+        {
+          "description": "CO2 Negativo"
+        }
+      ]
+    }
+  ]
+}
